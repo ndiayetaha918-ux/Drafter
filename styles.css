@@ -166,17 +166,26 @@ p { margin: 0; }
   color: var(--ink);
 }
 .brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 32px; height: 36px;
-  color: var(--ink);
-  transition: color var(--t-fast), transform var(--t-fast);
+  display: inline-block;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--paper);
+  flex-shrink: 0;
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.brand-mark img {
+  width: 112%;
+  height: 112%;
+  object-fit: cover;
+  object-position: center;
+  margin: -6%;
+  display: block;
 }
 .brand:hover .brand-mark {
-  color: var(--clay);
-  transform: rotate(-6deg);
+  transform: rotate(-6deg) scale(1.04);
+  box-shadow: 0 4px 14px rgba(26, 22, 20, 0.12);
 }
-.brand-mark svg { width: 100%; height: 100%; }
 .brand-word {
   display: flex;
   flex-direction: column;
@@ -1092,7 +1101,7 @@ p { margin: 0; }
   gap: 14px;
   color: var(--paper);
 }
-.footer-brand .brand-mark { color: var(--paper); width: 40px; height: 44px; }
+.footer-brand .brand-mark { width: 52px; height: 52px; background: var(--paper); }
 .footer-brand .brand-word strong {
   font-size: 16px;
   color: var(--paper);
