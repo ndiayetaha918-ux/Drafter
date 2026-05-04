@@ -3,30 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a1628" />
+    <meta name="theme-color" content="#1a1614" />
     <title>NS4PEACE — Nexus Security for Peace</title>
     <meta
       name="description"
-      content="Cabinet d'expertise en sécurité intérieure, gouvernance, formation et conseil stratégique. Afrique de l'Ouest et international."
+      content="Cabinet de recherche, de formation et de conseil stratégique en sécurité intérieure et gouvernance. Sous la direction du Contrôleur Général de Police Mody NDIAYE."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
+    <a class="skip" href="#main">Aller au contenu</a>
 
+    <!-- ====== NAV ====== -->
     <header class="nav" id="nav">
-      <a href="#" class="brand" aria-label="NS4PEACE — accueil">
-        <span class="brand-mark">
-          <svg viewBox="0 0 40 40" aria-hidden="true">
-            <path d="M20 2 L36 10 V22 C36 30 28 36 20 38 C12 36 4 30 4 22 V10 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M14 18 L20 14 L26 18 L26 26 L20 30 L14 26 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="20" cy="22" r="1.6" fill="currentColor"/>
+      <a href="#main" class="brand" aria-label="NS4PEACE">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Peace circle reinterpreted: hairline geometry, slight asymmetry, vertical bar extends as anchor -->
+          <svg viewBox="0 0 64 72">
+            <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+              <circle cx="32" cy="28" r="22"/>
+              <line x1="32" y1="4" x2="32" y2="68"/>
+              <line x1="32" y1="28" x2="14.5" y2="45.5"/>
+              <line x1="32" y1="28" x2="49.5" y2="45.5"/>
+              <circle cx="32" cy="28" r="1.4" fill="currentColor" stroke="none"/>
+            </g>
           </svg>
         </span>
         <span class="brand-word">
@@ -36,309 +42,431 @@
       </a>
 
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#manifeste">Manifeste</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#cabinet">Cabinet</a>
+        <a href="#expertise">Pratiques</a>
         <a href="#fondateur">Fondateur</a>
         <a href="#methode">Méthode</a>
-        <a href="#contact" class="nav-cta">Prendre contact</a>
+        <a href="#contact" class="nav-cta">
+          <span>Contact</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </nav>
 
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-grid"></div>
-        <div class="hero-glow"></div>
-        <svg class="hero-lines" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="lg1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#c9a55c" stop-opacity="0.0"/>
-              <stop offset="50%" stop-color="#c9a55c" stop-opacity="0.45"/>
-              <stop offset="100%" stop-color="#c9a55c" stop-opacity="0.0"/>
-            </linearGradient>
-          </defs>
-          <path d="M-50 620 Q 300 400 600 480 T 1300 380" stroke="url(#lg1)" stroke-width="1" fill="none"/>
-          <path d="M-50 700 Q 350 520 700 560 T 1300 460" stroke="url(#lg1)" stroke-width="0.8" fill="none" opacity="0.7"/>
-          <path d="M-50 540 Q 250 320 550 400 T 1300 300" stroke="url(#lg1)" stroke-width="0.6" fill="none" opacity="0.5"/>
-        </svg>
-      </div>
-
-      <div class="hero-inner">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span>Cabinet d'expertise · Sécurité &amp; Gouvernance · Depuis 2015</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line">La sécurité,</span>
-          <span class="line">comme architecture</span>
-          <span class="line"><em>de la paix.</em></span>
-        </h1>
-
-        <p class="hero-lede">
-          Bienvenue sur le site de NS4PEACE, votre cabinet d'expertise en sécurité intérieure et gouvernance.
-          Sous la direction du Général de police Mody&nbsp;DIAYE, nous offrons des services de formation et de
-          conseil adaptés aux besoins des entreprises et organisations internationales. Notre expertise
-          s'appuie sur une riche expérience dans l'application de la loi et le conseil technique.
-          Ensemble, œuvrons pour une meilleure sécurité et une gouvernance efficace.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#expertise" class="btn btn-primary">
-            <span>Découvrir nos domaines</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-ghost">Demander un entretien</a>
-        </div>
-
-        <dl class="hero-meta" aria-label="Quelques repères">
-          <div>
-            <dt>2015</dt>
-            <dd>Année de fondation</dd>
+    <main id="main">
+      <!-- ====== HERO ====== -->
+      <section class="hero">
+        <div class="hero-shell">
+          <div class="hero-meta-row">
+            <span class="hero-mono">N°01 — Cabinet d'expertise</span>
+            <span class="hero-mono hero-mono-end">Dakar · Afrique de l'Ouest · Depuis 2015</span>
           </div>
-          <div>
-            <dt>03</dt>
-            <dd>Entités · Recherche, Formation, Conseil</dd>
-          </div>
-          <div>
-            <dt>ECOWAS</dt>
-            <dd>Empreinte ouest-africaine &amp; internationale</dd>
-          </div>
-        </dl>
-      </div>
 
-      <a class="hero-scroll" href="#manifeste" aria-label="Faire défiler">
-        <span></span>
-      </a>
-    </section>
+          <h1 class="hero-title">
+            <span class="line">La sécurité,</span>
+            <span class="line">comme architecture</span>
+            <span class="line"><em>de la paix.</em></span>
+          </h1>
 
-    <!-- MANIFESTE -->
-    <section class="section manifesto" id="manifeste">
-      <div class="section-head">
-        <span class="kicker">01 — Manifeste</span>
-        <h2>Une lecture rigoureuse des paradigmes sécuritaires contemporains.</h2>
-      </div>
-      <div class="manifesto-grid">
-        <p class="manifesto-lead">
-          NS4Peace réunit trois entités complémentaires — recherche, formation et conseil stratégique —
-          pour éclairer les enjeux de sécurité intérieure et inspirer des modes de prise en charge
-          réellement bénéfiques aux populations.
-        </p>
-        <div class="manifesto-pillars">
-          <article>
-            <span class="num">I</span>
-            <h3>Recherche</h3>
-            <p>Méthodologies d'analyse des contextes nationaux et régionaux, au service de décideurs publics et privés.</p>
-          </article>
-          <article>
-            <span class="num">II</span>
-            <h3>Formation</h3>
-            <p>Renforcement de capacités des acteurs de la sécurité, conforme aux standards internationaux.</p>
-          </article>
-          <article>
-            <span class="num">III</span>
-            <h3>Conseil</h3>
-            <p>Accompagnement stratégique des autorités, entreprises et organisations sur des dossiers à forte sensibilité.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+          <div class="hero-body">
+            <p class="hero-lede">
+              Bienvenue sur le site de NS4PEACE, votre cabinet d'expertise en sécurité intérieure
+              et gouvernance. Sous la direction du Contrôleur Général de Police
+              <strong>Mody&nbsp;NDIAYE</strong>, nous offrons des services de formation et de
+              conseil adaptés aux besoins des entreprises et organisations internationales.
+              Notre expertise s'appuie sur une riche expérience dans l'application de la loi
+              et le conseil technique. Ensemble, œuvrons pour une meilleure sécurité
+              et une gouvernance efficace.
+            </p>
 
-    <!-- EXPERTISE -->
-    <section class="section expertise" id="expertise">
-      <div class="section-head">
-        <span class="kicker">02 — Expertise &amp; services</span>
-        <h2>Cinq pratiques, une même exigence&nbsp;: produire de la décision juste.</h2>
-      </div>
-
-      <ul class="expertise-list">
-        <li>
-          <span class="expertise-index">001</span>
-          <h3>Programmes de développement</h3>
-          <p>Planification et gestion de programmes de développement des services de sécurité, de la conception au pilotage opérationnel.</p>
-        </li>
-        <li>
-          <span class="expertise-index">002</span>
-          <h3>Politiques sécuritaires</h3>
-          <p>Conception de politiques sécuritaires conformes aux standards internationaux et adaptées aux réalités locales.</p>
-        </li>
-        <li>
-          <span class="expertise-index">003</span>
-          <h3>Renforcement de capacités</h3>
-          <p>Formation et professionnalisation des acteurs de la sécurité, du commandement à l'opérationnel de terrain.</p>
-        </li>
-        <li>
-          <span class="expertise-index">004</span>
-          <h3>Audit &amp; vulnérabilités</h3>
-          <p>Évaluation des systèmes de sécurité, cartographie des risques et identification des vulnérabilités structurelles.</p>
-        </li>
-        <li>
-          <span class="expertise-index">005</span>
-          <h3>Stratégie &amp; réponse</h3>
-          <p>Élaboration de stratégies et de réponses adaptées à des enjeux sécuritaires complexes ou émergents.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- FOUNDER -->
-    <section class="section founder" id="fondateur">
-      <div class="founder-grid">
-        <figure class="founder-portrait">
-          <div class="portrait-frame">
-            <img
-              src="assets/images/ImageTitan_2026-05-03_19-34-53.jpg"
-              alt="Portrait de Mody NDIAYE, fondateur de NS4PEACE"
-              onerror="this.parentElement.classList.add('is-empty'); this.remove();"
-            />
-            <div class="portrait-placeholder">
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <circle cx="32" cy="24" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M12 56 C 14 42 22 36 32 36 C 42 36 50 42 52 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-              <span>Portrait à venir</span>
+            <div class="hero-cta">
+              <a href="#expertise" class="btn btn-primary">
+                <span>Découvrir nos pratiques</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-link">
+                <span>Demander un entretien</span>
+              </a>
             </div>
           </div>
-          <figcaption>
-            <span class="figure-rank">Commissaire divisionnaire · Classe exceptionnelle</span>
-            <strong>Mody NDIAYE</strong>
-            <em>Fondateur — Expert conseiller</em>
-          </figcaption>
-        </figure>
 
-        <div class="founder-bio">
-          <span class="kicker">03 — Fondateur</span>
-          <h2>Une trajectoire au croisement de l'État,<br/>du multilatéral et du terrain.</h2>
+          <ul class="hero-meta" aria-label="Repères">
+            <li>
+              <span class="m-num">2015</span>
+              <span class="m-label">Année de fondation</span>
+            </li>
+            <li>
+              <span class="m-num">30<sup>+</sup></span>
+              <span class="m-label">Années d'expérience publique &amp; ONU</span>
+            </li>
+            <li>
+              <span class="m-num">08</span>
+              <span class="m-label">Pays d'intervention en Afrique</span>
+            </li>
+            <li>
+              <span class="m-num">03</span>
+              <span class="m-label">Recherche · Formation · Conseil</span>
+            </li>
+          </ul>
+        </div>
 
-          <p class="bio-lead">
-            Mody NDIAYE est aujourd'hui Conseiller spécial de la Présidente de l'Office National
-            de Lutte contre la Fraude et la Corruption du Sénégal. Son parcours combine
-            la rigueur du haut commandement, la finesse du conseil technique
-            et la pratique opérationnelle des missions internationales.
+        <a class="scroll-cue" href="#cabinet" aria-label="Faire défiler">
+          <span class="cue-line"></span>
+          <span class="cue-label">Scroll</span>
+        </a>
+      </section>
+
+      <!-- ====== CABINET ====== -->
+      <section class="section cabinet" id="cabinet">
+        <header class="section-head">
+          <span class="kicker"><span>02</span>Le cabinet</span>
+          <h2>Une lecture rigoureuse <em>des paradigmes</em> sécuritaires contemporains.</h2>
+        </header>
+
+        <div class="cabinet-grid">
+          <p class="cabinet-lead">
+            NS4Peace réunit trois entités complémentaires — recherche, formation et conseil
+            stratégique — pour éclairer les enjeux de sécurité intérieure et inspirer
+            des modes de prise en charge réellement bénéfiques aux populations.
           </p>
 
-          <ol class="timeline">
+          <ol class="pillars">
             <li>
-              <span class="t-year">Aujourd'hui</span>
-              <p>Conseiller spécial de la Présidente de l'OFNAC, Sénégal.</p>
+              <span class="pillar-num">i</span>
+              <h3>Recherche</h3>
+              <p>Méthodologies d'analyse des contextes nationaux et régionaux, au service de décideurs publics et privés.</p>
             </li>
             <li>
-              <span class="t-year">2013 — 2014</span>
-              <p>Conseiller technique chargé de la sécurité auprès du Ministre de l'Intérieur.</p>
+              <span class="pillar-num">ii</span>
+              <h3>Formation</h3>
+              <p>Renforcement de capacités des acteurs de la sécurité, conforme aux standards internationaux.</p>
             </li>
             <li>
-              <span class="t-year">2011 — 2012</span>
-              <p>Conseiller technique du Directeur Général de la Police Nationale.</p>
-            </li>
-            <li>
-              <span class="t-year">Antérieurement</span>
-              <p>
-                Directeur de la Police de l'Air et des Frontières · Conseiller spécial résident
-                de l'ONUDC en Guinée-Bissau · Coordonnateur de programmes régionaux de sécurité ·
-                Chef des opérations de la Police civile des Nations Unies (ONUCI) · Chef de division
-                à la Direction centrale de la sécurité publique du Sénégal.
-              </p>
+              <span class="pillar-num">iii</span>
+              <h3>Conseil</h3>
+              <p>Accompagnement stratégique des autorités, entreprises et organisations sur des dossiers à forte sensibilité.</p>
             </li>
           </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- METHOD -->
-    <section class="section method" id="methode">
-      <div class="section-head">
-        <span class="kicker">04 — Méthode</span>
-        <h2>Recherche, évaluation, formation&nbsp;: un même protocole d'exigence.</h2>
-      </div>
+      <!-- ====== EXPERTISE ====== -->
+      <section class="section expertise" id="expertise">
+        <header class="section-head">
+          <span class="kicker"><span>03</span>Pratiques</span>
+          <h2>Cinq pratiques, une même exigence&nbsp;: <em>produire de la décision juste.</em></h2>
+        </header>
 
-      <div class="method-grid">
-        <article class="method-card">
-          <header><span>1</span><h3>Lire le contexte</h3></header>
-          <p>Analyse approfondie des contextes nationaux et régionaux pour saisir la véritable structure du risque.</p>
-        </article>
-        <article class="method-card">
-          <header><span>2</span><h3>Évaluer le système</h3></header>
-          <p>Protocoles d'évaluation conçus sur mesure&nbsp;: cartographie, audit des dispositifs, mise au jour des angles morts.</p>
-        </article>
-        <article class="method-card">
-          <header><span>3</span><h3>Formuler la stratégie</h3></header>
-          <p>Recommandations stratégiques et opérationnelles, hiérarchisées, traçables, exécutables.</p>
-        </article>
-        <article class="method-card">
-          <header><span>4</span><h3>Accompagner la décision</h3></header>
-          <p>Mise en œuvre, formation des équipes, transmission&nbsp;: la décision se tient dans la durée.</p>
-        </article>
-      </div>
-    </section>
+        <ul class="practice-list">
+          <li class="practice">
+            <span class="p-index">001</span>
+            <div class="p-body">
+              <h3>Programmes de développement</h3>
+              <p>Planification et gestion de programmes de développement des services de sécurité, de la conception au pilotage opérationnel.</p>
+            </div>
+            <span class="p-keyword">Stratégie</span>
+          </li>
+          <li class="practice">
+            <span class="p-index">002</span>
+            <div class="p-body">
+              <h3>Politiques sécuritaires</h3>
+              <p>Conception de politiques publiques conformes aux standards internationaux et adaptées aux réalités locales.</p>
+            </div>
+            <span class="p-keyword">Gouvernance</span>
+          </li>
+          <li class="practice">
+            <span class="p-index">003</span>
+            <div class="p-body">
+              <h3>Renforcement de capacités</h3>
+              <p>Formation et professionnalisation des acteurs de la sécurité, du commandement à l'opérationnel de terrain.</p>
+            </div>
+            <span class="p-keyword">Formation</span>
+          </li>
+          <li class="practice">
+            <span class="p-index">004</span>
+            <div class="p-body">
+              <h3>Audit &amp; vulnérabilités</h3>
+              <p>Évaluation des systèmes de sécurité, cartographie des risques et identification des vulnérabilités structurelles.</p>
+            </div>
+            <span class="p-keyword">Diagnostic</span>
+          </li>
+          <li class="practice">
+            <span class="p-index">005</span>
+            <div class="p-body">
+              <h3>Stratégie &amp; réponse</h3>
+              <p>Élaboration de stratégies et de réponses adaptées à des enjeux sécuritaires complexes ou émergents.</p>
+            </div>
+            <span class="p-keyword">Crise</span>
+          </li>
+        </ul>
+      </section>
 
-    <!-- AUDIENCES -->
-    <section class="section audiences">
-      <div class="audiences-inner">
-        <span class="kicker">05 — À qui nous parlons</span>
-        <h2>Nous travaillons avec celles et ceux qui décident.</h2>
-        <ul>
+      <!-- ====== FONDATEUR ====== -->
+      <section class="section founder" id="fondateur">
+        <header class="section-head">
+          <span class="kicker"><span>04</span>Fondateur</span>
+          <h2>Une trajectoire au croisement de l'État, <em>du multilatéral et du terrain.</em></h2>
+        </header>
+
+        <div class="founder-layout">
+          <figure class="founder-portrait">
+            <div class="portrait-frame" data-portrait="main">
+              <img
+                src="assets/images/ImageTitan_2026-05-03_19-34-53.jpg"
+                alt="Portrait du Contrôleur Général de Police Mody NDIAYE"
+                onerror="this.parentElement.classList.add('is-empty');"
+              />
+              <div class="portrait-empty">
+                <svg viewBox="0 0 64 72" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="1">
+                    <circle cx="32" cy="28" r="22"/>
+                    <line x1="32" y1="4" x2="32" y2="68"/>
+                    <line x1="32" y1="28" x2="14.5" y2="45.5"/>
+                    <line x1="32" y1="28" x2="49.5" y2="45.5"/>
+                  </g>
+                </svg>
+                <span>Portrait à venir</span>
+              </div>
+            </div>
+            <figcaption>
+              <span class="rank">Contrôleur Général de Police</span>
+              <strong>Mody&nbsp;NDIAYE</strong>
+              <em>Fondateur — Expert conseiller</em>
+            </figcaption>
+          </figure>
+
+          <div class="founder-bio">
+            <p class="bio-lead">
+              Haut fonctionnaire de police, plus de <strong>30 ans d'expérience</strong> au sein de la
+              Police nationale sénégalaise — dont 15 années consacrées à la conception, la mise
+              en œuvre et l'évaluation de politiques de sécurité intérieure en Afrique
+              subsaharienne. Expert reconnu en gouvernance sécuritaire, coopération
+              internationale et réforme institutionnelle des forces de sécurité.
+            </p>
+
+            <ul class="bio-tags">
+              <li>Trilingue FR · EN · PT</li>
+              <li>Né à Dakar, 1965</li>
+              <li>UN · UE · CEDEAO</li>
+            </ul>
+
+            <ol class="timeline">
+              <li>
+                <span class="t-year">2025 → aujourd'hui</span>
+                <h4>Inspecteur des Services de Sécurité</h4>
+                <p>Ministère de l'Intérieur et de la Sécurité publique — Sénégal.</p>
+              </li>
+              <li>
+                <span class="t-year">2024 — 2025</span>
+                <h4>Conseiller Technique Sécurité du Ministre</h4>
+                <p>Ministère de l'Intérieur — Sénégal. Conseil National de Sécurité, accords de coopération.</p>
+              </li>
+              <li>
+                <span class="t-year">2019 — 2022</span>
+                <h4>Expert Technique Principal — PAASIT / Union Européenne</h4>
+                <p>Tchad. Politique de formation des trois forces de sécurité intérieure&nbsp;: Police, Gendarmerie, Garde Nationale et Nomade.</p>
+              </li>
+              <li>
+                <span class="t-year">2014 — 2019</span>
+                <h4>Coordonnateur Académie RINLCAO &amp; Conseiller spécial OFNAC</h4>
+                <p>Réseau des Institutions Nationales de Lutte contre la Corruption en Afrique de l'Ouest. 13 pays membres.</p>
+              </li>
+              <li>
+                <span class="t-year">2013</span>
+                <h4>Directeur de la Police de l'Air et des Frontières</h4>
+                <p>Sénégal. Pilotage stratégique, déploiement de 360 officiers, renseignement transfrontalier.</p>
+              </li>
+              <li>
+                <span class="t-year">2008 — 2010</span>
+                <h4>Conseiller Spécial Résident — ONUDC</h4>
+                <p>Guinée-Bissau. Programme national anti-drogue et crime organisé, plan opérationnel financé UE.</p>
+              </li>
+              <li>
+                <span class="t-year">2006 — 2008</span>
+                <h4>Coordonnateur de Programme — ONUDC</h4>
+                <p>Programme régional de Contrôle des Conteneurs (Ghana, Cap-Vert, Bénin, Togo) — coopération avec l'Amérique latine.</p>
+              </li>
+              <li>
+                <span class="t-year">2004 — 2005</span>
+                <h4>Chef des Opérations — Police Civile ONUCI</h4>
+                <p>Mission des Nations Unies en Côte d'Ivoire. Réintégration des combattants démobilisés.</p>
+              </li>
+              <li class="t-collapsed">
+                <span class="t-year">Avant 2004</span>
+                <p>Conseiller Technique du DGPN · Chef du Commissariat du Plateau (Dakar) · Coordonnateur Adjoint du Comité Interministériel de Lutte contre la Drogue · Chef de la Brigade des Affaires Criminelles.</p>
+              </li>
+            </ol>
+
+            <div class="bio-foot">
+              <span>Formations</span>
+              <p>Commissaire de Police — ENP Dakar · Gestion de crise — Louisiana State Police Academy · Licence Droit public &amp; relations internationales — UCAD · National Defense University, Fort Knox · Certified Fraud Examiner.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-gallery" aria-label="Galerie">
+          <!-- Gallery slots — populated after photo upload. Hidden if empty. -->
+        </div>
+      </section>
+
+      <!-- ====== METHODE ====== -->
+      <section class="section method" id="methode">
+        <header class="section-head">
+          <span class="kicker"><span>05</span>Méthode</span>
+          <h2>Recherche, évaluation, formation&nbsp;: <em>un même protocole d'exigence.</em></h2>
+        </header>
+
+        <ol class="method-steps">
+          <li>
+            <span class="step-num">01</span>
+            <h3>Lire le contexte</h3>
+            <p>Analyse approfondie des contextes nationaux et régionaux pour saisir la véritable structure du risque.</p>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <h3>Évaluer le système</h3>
+            <p>Protocoles d'évaluation conçus sur mesure&nbsp;: cartographie, audit, mise au jour des angles morts.</p>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <h3>Formuler la stratégie</h3>
+            <p>Recommandations stratégiques et opérationnelles, hiérarchisées, traçables, exécutables.</p>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <h3>Accompagner la décision</h3>
+            <p>Mise en œuvre, formation des équipes, transmission&nbsp;: la décision se tient dans la durée.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ====== AUDIENCES ====== -->
+      <section class="section audiences">
+        <header class="section-head">
+          <span class="kicker"><span>06</span>Interlocuteurs</span>
+          <h2>Nous travaillons avec celles et ceux <em>qui décident.</em></h2>
+        </header>
+        <ul class="audience-list">
           <li>Autorités &amp; services de sécurité intérieure</li>
           <li>Organisations internationales &amp; bailleurs</li>
-          <li>Entreprises, chefs de projets, dirigeants</li>
+          <li>Entreprises, dirigeants, chefs de projets</li>
           <li>Leaders communautaires &amp; collectivités</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <div class="contact-grid">
-        <div class="contact-text">
-          <span class="kicker">06 — Entrer en relation</span>
-          <h2>Un dossier sensible, un programme à structurer, une formation à concevoir&nbsp;?</h2>
-          <p>Nous accueillons les demandes confidentielles. Réponse personnelle sous 72 heures ouvrées.</p>
+      <!-- ====== CONTACT ====== -->
+      <section class="section contact" id="contact">
+        <div class="contact-shell">
+          <header class="contact-head">
+            <span class="kicker"><span>07</span>Entrer en relation</span>
+            <h2>Un dossier sensible, un programme à structurer, une formation à concevoir&nbsp;?</h2>
+            <p>Nous accueillons les demandes confidentielles. Réponse personnelle sous 72&nbsp;heures ouvrées.</p>
+            <dl class="contact-coord">
+              <div>
+                <dt>Direction</dt>
+                <dd>Mody NDIAYE — Contrôleur Général de Police</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:papecmody@gmail.com">papecmody@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>Implantation</dt>
+                <dd>Dakar · Sénégal</dd>
+              </div>
+            </dl>
+          </header>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-ack').classList.add('show');">
+            <label>
+              <span>Nom &amp; structure</span>
+              <input type="text" name="name" required autocomplete="name"/>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email"/>
+            </label>
+            <label>
+              <span>Objet</span>
+              <select name="topic">
+                <option>Conseil stratégique</option>
+                <option>Formation &amp; renforcement de capacités</option>
+                <option>Recherche &amp; évaluation</option>
+                <option>Autre</option>
+              </select>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">
+              <span>Envoyer la demande</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-ack" role="status">Merci. Votre demande a bien été enregistrée — nous revenons vers vous très prochainement.</p>
+          </form>
         </div>
-
-        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-ack').classList.add('show');">
-          <label>
-            <span>Nom &amp; structure</span>
-            <input type="text" name="name" required autocomplete="name"/>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required autocomplete="email"/>
-          </label>
-          <label>
-            <span>Objet</span>
-            <select name="topic">
-              <option>Conseil stratégique</option>
-              <option>Formation &amp; renforcement de capacités</option>
-              <option>Recherche &amp; évaluation</option>
-              <option>Autre</option>
-            </select>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">
-            <span>Envoyer la demande</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <p class="form-ack" role="status">Merci. Votre demande a bien été enregistrée — nous revenons vers vous très prochainement.</p>
-        </form>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
-      <div class="footer-top">
-        <div>
-          <strong>NS4PEACE</strong>
-          <em>Nexus Security for Peace</em>
+      <div class="footer-shell">
+        <a href="#main" class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 72">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                <circle cx="32" cy="28" r="22"/>
+                <line x1="32" y1="4" x2="32" y2="68"/>
+                <line x1="32" y1="28" x2="14.5" y2="45.5"/>
+                <line x1="32" y1="28" x2="49.5" y2="45.5"/>
+                <circle cx="32" cy="28" r="1.4" fill="currentColor" stroke="none"/>
+              </g>
+            </svg>
+          </span>
+          <span class="brand-word">
+            <strong>NS4PEACE</strong>
+            <em>Nexus Security for Peace</em>
+          </span>
+        </a>
+
+        <div class="footer-cols">
+          <div>
+            <h4>Pratiques</h4>
+            <ul>
+              <li><a href="#expertise">Programmes de développement</a></li>
+              <li><a href="#expertise">Politiques sécuritaires</a></li>
+              <li><a href="#expertise">Renforcement de capacités</a></li>
+              <li><a href="#expertise">Audit &amp; vulnérabilités</a></li>
+              <li><a href="#expertise">Stratégie &amp; réponse</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cabinet</h4>
+            <ul>
+              <li><a href="#cabinet">Présentation</a></li>
+              <li><a href="#fondateur">Fondateur</a></li>
+              <li><a href="#methode">Méthode</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Coordonnées</h4>
+            <ul>
+              <li><a href="mailto:papecmody@gmail.com">papecmody@gmail.com</a></li>
+              <li>Dakar · Sénégal</li>
+              <li>Afrique de l'Ouest &amp; international</li>
+            </ul>
+          </div>
         </div>
-        <p>Cabinet de recherche, de formation et de conseil stratégique en sécurité intérieure et gouvernance.</p>
       </div>
+
       <div class="footer-bottom">
         <span>© <span id="year"></span> NS4PEACE — Tous droits réservés.</span>
-        <span>Dakar · Afrique de l'Ouest · International</span>
+        <span>Cabinet d'expertise · Sécurité intérieure &amp; gouvernance</span>
       </div>
     </footer>
 
