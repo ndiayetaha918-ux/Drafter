@@ -27,7 +27,7 @@
 
   /* ---------- Reveal animations ---------- */
   const targets = document.querySelectorAll(
-    '.section-head, .pillars li, .practice, .timeline li, .method-steps li, .audience-list li, .hero-title, .hero-lede, .hero-cta, .hero-meta, .founder-portrait, .founder-bio'
+    '.section-head, .pillars li, .practice, .timeline li, .method-steps li, .audience-list li, .hero-title, .hero-lede, .hero-cta, .hero-meta, .founder-portrait, .founder-bio, .gov-flag, .gov-levers li, .gov-dimensions li, .gov-cta'
   );
   targets.forEach((t) => t.classList.add('reveal'));
 
